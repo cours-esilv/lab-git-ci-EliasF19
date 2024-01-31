@@ -1,4 +1,4 @@
- # Installe java 8 sur l'agent
+      # Installe java 8 sur l'agent
       - name: Set up JDK 8
         uses: actions/setup-java@v2
         with:
@@ -8,8 +8,8 @@
       # Compile notre application
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
-        
- # Publie les résultats de test
+
+      # Publie les résultats de test
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action@v1
         if: always()
